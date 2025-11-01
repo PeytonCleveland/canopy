@@ -1,22 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@canopy/ui/theme.css";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
-}
+@plugin "tailwindcss-react-aria-components";
 
 body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		sans-serif;
+	font-family: var(--font-sans);
+	background: rgb(var(--color-gray-50));
+	color: rgb(var(--color-gray-900));
 }
