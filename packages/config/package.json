@@ -1,8 +1,8 @@
 {
-  "name": "@canopy/config",
-  "version": "0.0.0",
-  "private": true,
-  "files": [
-    "*.json"
-  ]
+	"name": "@canopy/config",
+	"version": "0.0.0",
+	"private": true,
+	"files": [
+		"*.json"
+	]
 }
