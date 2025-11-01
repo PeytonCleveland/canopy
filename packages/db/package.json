@@ -1,0 +1,29 @@
+{
+	"name": "@canopy/db",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./schema": "./src/schema/index.ts",
+		"./client": "./src/client.ts"
+	},
+	"scripts": {
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:push": "drizzle-kit push",
+		"db:studio": "drizzle-kit studio",
+		"db:check": "drizzle-kit check",
+		"lint": "biome check .",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^1.0.2",
+		"drizzle-orm": "^0.44.7"
+	},
+	"devDependencies": {
+		"@canopy/config": "workspace:*",
+		"drizzle-kit": "^0.31.0",
+		"typescript": "^5.9.3"
+	}
+}
