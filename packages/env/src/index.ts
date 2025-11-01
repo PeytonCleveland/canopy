@@ -36,6 +36,14 @@ export const sharedEnv = createEnv({
 			.enum(['development', 'production', 'test'])
 			.default('development')
 			.describe('Node environment'),
+		RESEND_API_KEY: z
+			.string()
+			.min(1)
+			.describe('Resend API key for email service'),
+		RESEND_FROM_EMAIL: z
+			.string()
+			.email()
+			.describe('From email address for Resend'),
 	},
 
 	/**

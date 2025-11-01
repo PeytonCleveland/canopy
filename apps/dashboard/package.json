@@ -14,12 +14,15 @@
 		"@canopy/env": "workspace:*",
 		"@canopy/ui": "workspace:*",
 		"@t3-oss/env-nextjs": "^0.13.8",
+		"better-auth": "^1.3.34",
 		"next": "^16.0.1",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
+		"resend": "^6.4.0",
 		"zod": "^4.1.12"
 	},
 	"devDependencies": {
+		"@better-auth/cli": "^1.3.34",
 		"@canopy/config": "workspace:*",
 		"@tailwindcss/postcss": "^4.1.16",
 		"@types/node": "^24.9.2",
