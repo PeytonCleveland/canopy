@@ -40,18 +40,19 @@ export const sharedEnv = createEnv({
 
 	/**
 	 * Environment variables available on both client and server.
-	 * Must be prefixed with NEXT_PUBLIC_ for Next.js or VITE_ for Vite.
+	 * This is empty for shared env - apps will define their own client vars.
 	 */
 	client: {},
 
 	/**
-	 * Shared environment variables that don't need client-side access.
+	 * Client-side variables must be prefixed to prevent accidentally exposing server vars.
+	 * This is a dummy prefix since we have no client vars in shared env.
 	 */
-	shared: {},
+	clientPrefix: 'PUBLIC_',
 
 	/**
 	 * Runtime environment variables object.
-	 * For Next.js edge runtime, you can use `process.env`.
+	 * For Node.js, use process.env.
 	 * For other environments, use the appropriate method to access env vars.
 	 */
 	runtimeEnv: process.env,
