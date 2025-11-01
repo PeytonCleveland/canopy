@@ -5,7 +5,11 @@
 	"packageManager": "pnpm@10.20.0",
 	"scripts": {
 		"dev": "turbo dev",
+		"dev:web": "pnpm --filter web dev",
+		"dev:dashboard": "pnpm --filter dashboard dev",
 		"build": "turbo build",
+		"build:web": "pnpm --filter web build",
+		"build:dashboard": "pnpm --filter dashboard build",
 		"test": "turbo test",
 		"lint": "turbo lint",
 		"typecheck": "turbo typecheck",
