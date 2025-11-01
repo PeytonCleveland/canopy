@@ -7,15 +7,25 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@canopy/ui'
+import { requireAuth } from '../lib/auth'
+import { SignOutButton } from '../components/sign-out-button'
 
-export default function DashboardHome() {
+export default async function DashboardHome() {
+	const { user } = await requireAuth()
+
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center p-8">
 			<div className="max-w-6xl w-full space-y-8">
 				<div className="text-center">
-					<h1 className="text-4xl font-bold mb-4">Canopy Dashboard</h1>
-					<p className="text-xl text-[rgb(var(--color-gray-600))] mb-8">
-						Welcome to your design workspace
+					<div className="flex items-center justify-between mb-4">
+						<h1 className="text-4xl font-bold flex-1">Canopy Dashboard</h1>
+						<SignOutButton />
+					</div>
+					<p className="text-xl text-[rgb(var(--color-gray-600))] mb-2">
+						Welcome back, {user.name || user.email}!
+					</p>
+					<p className="text-sm text-[rgb(var(--color-gray-500))] mb-8">
+						Your design workspace
 					</p>
 				</div>
 

@@ -11,6 +11,8 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@canopy/auth": "workspace:*",
+		"@canopy/db": "workspace:*",
 		"@canopy/env": "workspace:*",
 		"@canopy/ui": "workspace:*",
 		"@t3-oss/env-nextjs": "^0.13.8",

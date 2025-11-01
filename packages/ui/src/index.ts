@@ -18,6 +18,8 @@ export {
 	CardHeader,
 	CardTitle,
 } from './components/card'
+export type { InputProps } from './components/input'
+export { Input } from './components/input'
 
 // Utils
 export { cn } from './utils/cn'
