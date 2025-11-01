@@ -1,4 +1,0 @@
-module.exports = {
-  '**/*.{ts,tsx,js,jsx}': ['biome check --write --no-errors-on-unmatched'],
-  '**/*.{json,jsonc}': ['biome format --write --no-errors-on-unmatched'],
-}
