@@ -1,0 +1,21 @@
+{
+	"name": "@canopy/env",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"lint": "biome check .",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@t3-oss/env-core": "^0.11.1",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@canopy/config": "workspace:*",
+		"typescript": "^5.9.3"
+	}
+}
