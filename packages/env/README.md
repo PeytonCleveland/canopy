@@ -9,6 +9,25 @@ Type-safe environment variables with runtime validation using [t3-env](https://e
 - **Monorepo-Friendly**: Share common env vars, extend for app-specific needs
 - **Framework Support**: Works with Next.js, Node.js, and other JavaScript runtimes
 
+## Environment File Structure
+
+Each application in the monorepo has its own `.env` file:
+
+```
+apps/
+  dashboard/
+    .env              # Dashboard-specific environment variables
+    .env.example      # Template for dashboard environment variables
+  web/
+    .env              # Web app-specific environment variables
+    .env.example      # Template for web environment variables
+```
+
+This approach allows:
+- Each app to have its own configuration (e.g., different `NEXT_PUBLIC_APP_URL` values)
+- Independent deployments without shared credentials
+- Clear separation of concerns between applications
+
 ## Usage
 
 ### Shared Environment Variables
@@ -67,8 +86,14 @@ import './env'
 
 Current shared environment variables:
 
+### Server-side Variables
+
 - `DATABASE_URL` (string, URL) - Neon PostgreSQL connection string
 - `NODE_ENV` (enum: 'development' | 'production' | 'test') - Node environment
+- `RESEND_API_KEY` (string) - Resend API key for email service
+- `RESEND_FROM_EMAIL` (string, email) - From email address for Resend
+
+These variables are validated at runtime and available to all apps that import `sharedEnv`.
 
 ## Adding New Shared Variables
 

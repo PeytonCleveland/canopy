@@ -1,4 +1,4 @@
-import { sharedEnv } from '@canopy/env'
+import { sharedEnv, z } from '@canopy/env'
 import { createEnv } from '@t3-oss/env-nextjs'
 
 /**
@@ -27,7 +27,7 @@ export const env = createEnv({
 	 * Must be prefixed with NEXT_PUBLIC_
 	 */
 	client: {
-		// Example: NEXT_PUBLIC_API_URL: z.string().url(),
+		NEXT_PUBLIC_APP_URL: z.string().url(),
 	},
 
 	/**
@@ -35,7 +35,6 @@ export const env = createEnv({
 	 * This is required for client-side variables in Next.js.
 	 */
 	experimental__runtimeEnv: {
-		// Map NEXT_PUBLIC_ vars here for client-side access
-		// Example: NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+		NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
 	},
 })
